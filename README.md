@@ -3,8 +3,7 @@ This is Madison West Rocketry's Plazma Thruster Webapp. It displayes the ionic e
 to the voltage supplied to the engine (0-10kV) --controled by a a simple jQuery Ui slider. 
 
 ## Prerequisites
-The Images from these project can be credited to Pavel Pinkas
-Uses slightly modified jQuery 2.2.1 and 2.2.1 libraries 
+The Images from these project can be credited to Pavel Pinkas. Uses slightly modified jQuery 2.2.1 and 2.2.1 libraries 
 
 https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 
