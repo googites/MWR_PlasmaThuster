@@ -7,15 +7,35 @@
     <body>
         <div class="range-slider">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <input class="range-slider__range" type="range" id="slider" value="0.0" min="0" max="50" step="1" />
+            <input class="range-slider__range" type="range" id="slider" value="0.0" min="0" max="58" step="1" />
             <span class="range-slider__value"></span>
             <div class="unit">
                 <p>kV</p>
             </div>
             
         </div>
-        <img src=""  id='img'/>
+        <div>
+                <img src="morphs/04300.png"  id='img'/>
+                <img src="specs/thruster10kV.png" id='specImg'/>
+        </div>
         <script>
+            var specImageUrl = new Array;
+
+                specImageUrl[0] = 'specs/thruster3.9kV.png';
+                specImageUrl[1] = 'specs/thruster4.5kV.png';
+                specImageUrl[2] = 'specs/thruster4.9kV.png';
+                specImageUrl[3] = 'specs/thruster5.2kV.png';
+                specImageUrl[4] = 'specs/thruster5.6kV.png';
+                specImageUrl[5] = 'specs/thruster6.2kV.png';
+                specImageUrl[6] = 'specs/thruster6.5kV.png';
+                specImageUrl[7] = 'specs/thruster7kV.png';
+                specImageUrl[8] = 'specs/thruster7.5kV.png';
+                specImageUrl[9] = 'specs/thruster8kV.png';
+                    specImageUrl[10] = 'specs/thruster8.6kV.png';
+                    specImageUrl[11] = 'specs/thruster9kV.png';
+                    specImageUrl[12] = 'specs/thruster9.4kV.png';
+                    specImageUrl[13] = 'specs/thruster10kV.png';
+
             var imageUrl = new Array();
             
                 imageUrl[0] = 'morphs/04300.png';
@@ -82,6 +102,7 @@
                         var v=$(this).val();//getting slider val
                     $('#sliderStatus').html( $(this).val() );
                 $("#img").prop("src", imageUrl[v]);
+                $("#specImg").prop("src", specImageUrl[Math.ceil((58/13 * v)*10)/10]);
                // .css('background-image', 'url("imageUrl[v])')
             });
             var rangeSlider = function() {
@@ -100,7 +121,7 @@
                 range.on("input", function() {
                 $(this)
                     .next(value)
-                    .html(this.value / 5);
+                    .html(Math.ceil((5.7/58 * this.value + 4.3)*10)/10);
             });
         });
         };
