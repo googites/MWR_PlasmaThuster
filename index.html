@@ -9,6 +9,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <input class="range-slider__range" type="range" id="slider" value="0.0" min="0" max="58" step="1" />
             <span class="range-slider__value"></span>
+            <span class="rang-slider_display"></span>
             <div class="unit">
                 <p>kV</p>
             </div>
@@ -102,13 +103,14 @@
                         var v=$(this).val();//getting slider val
                     $('#sliderStatus').html( $(this).val() );
                 $("#img").prop("src", imageUrl[v]);
-                $("#specImg").prop("src", specImageUrl[Math.ceil((58/13 * v)*10)/10]);
+                $("#specImg").prop("src", specImageUrl[Math.round(13/58 * v)]);
                // .css('background-image', 'url("imageUrl[v])')
             });
             var rangeSlider = function() {
             var slider = $(".range-slider"),
                 range = $(".range-slider__range"),
                 value = $(".range-slider__value");
+                
             
             slider.each(function() {
                 value.each(function() {
