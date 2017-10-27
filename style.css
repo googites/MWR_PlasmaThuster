@@ -3,7 +3,7 @@
   }
   
   body {
-    font-family: "Raleway" sans-serif;
+    font-family:  sans-serif;
     
   }
   #img {
@@ -15,12 +15,13 @@
   }
   #specImg{
     position: fixed;
-    bottom: 50px;
-    left: 25px;
+    bottom: 15px;
+    left: 15px;
     width: 330px;
     height: auto;
     opacity: 0.8;
   }
+
   @media (min-width: 600px) {
     body {
       /*
@@ -35,34 +36,38 @@
     position: relative; 
     margin: auto;
     width: 50%;
+    top: 8px;
     z-index: auto;
-    opacity: 0.9;
-  }
-  
-  /*individual unit*/
-  .unit {
-    position: relative;
-    left: 96%;
-    bottom: 39px;
-    font-family: sans-serif;
-    color: #fff;
+    opacity: 0.8;
   }
   
   .range-slider__range {
     -webkit-appearance: none;
     width: calc(100% - (88px));
-    height: 10px;
+    height: 15px;
     border-radius: 5px;
     background: #d7dcdf;
     outline: none;
     padding: 0;
     margin: 0;
   }
+
+  /*individual unit*/
+  .unit {
+    position: relative;
+    font-size: 150%;
+    left: 98%;
+    bottom: 47.6px;
+    font-family: sans-serif;
+    color: #fff;
+  }
+
+  /* Thumb Slider*/
   .range-slider__range::-webkit-slider-thumb {
     -webkit-appearance: none;
             appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #2e4ca1;
     cursor: pointer;
@@ -76,8 +81,8 @@
     background: #1abc9c;
   }
   .range-slider__range::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: 0;
     border-radius: 50%;
     background: #2e4ca1;
@@ -91,28 +96,30 @@
   .range-slider__range:active::-moz-range-thumb {
     background: #1abc9c;
   }
-  
+  /*Value*/
   .range-slider__value {
     display: inline-block;
-    position: relative;
-    width: 75px;
+    position: fixed;
+    top: 5px;
+    width: 112.5px;
     color: #fff;
-    line-height: 20px;
+    line-height: 30px;
     text-align: left;
     border-radius: 3px;
     background: #2e4ca1;
     padding: 5px 10px;
-    margin-left: 8px;
+    margin-left: 12px;
+    font-size: 150%;
   }
   .range-slider__value:after {
     position: absolute;
     top: 8px;
-    left: -7px;
+    left: -10.5px;
     width: 0;
     height: 0;
-    border-top: 7px solid transparent;
-    border-right: 7px solid #2c3e50;
-    border-bottom: 7px solid transparent;
+    border-top: 10.5px solid transparent;
+    border-right: 10.5px solid #2c4ca1;
+    border-bottom: 10.5px solid transparent;
     content: "";
   }
   
