@@ -10,9 +10,6 @@
             <input class="range-slider__range" type="range" id="slider" value="0.0" min="0" max="58" step="1" />
             <span class="range-slider__value"></span>
             <span class="rang-slider_display"></span>
-            <div class="unit">
-                <p>kVs</p>
-            </div>
             
         </div>
         <div>
@@ -123,7 +120,7 @@
                 range.on("input", function() {
                 $(this)
                     .next(value)
-                    .html(Math.ceil((5.7/58 * this.value + 4.3)*10)/10);
+                    .html(Math.ceil((5.7/58 * this.value + 4.3)*10)/10 + " kVs");
             });
         });
         };
